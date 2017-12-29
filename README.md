@@ -1,10 +1,10 @@
-## php7 + nginx + percona/postgres + symfony3 docker image
+## php7.2 + nginx + percona/postgres + symfony4 docker image
 
 Just clone the repo and run ```docker-compose up```, your symfony aplication should be placed in ```symfony``` directory. All nginx logs will be placed in `logs` directory.
 
 For postgres version run ```docker-compose -f docker-compose-postgres.yml```.
 
-After running the container, page will be available at ```http://symfony.dev/```. 
+After running the container, page will be available at ```http://symfony.local/```. 
 
 Requires docker-compose 1.6+
 
