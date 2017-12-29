@@ -15,7 +15,7 @@ services:
         volumes:
             - ./symfony:/var/www/symfony
         links:
-            - postgres_db
+            - mysql_db
     nginx:
         build: ./nginx
         ports:
@@ -23,5 +23,5 @@ services:
         links:
             - php
         volumes:
-            - php
+            - ./symfony:/var/www/symfony
             - ./logs/nginx/:/var/log/nginx
