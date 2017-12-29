@@ -1,4 +1,4 @@
-## php7.2 + nginx + percona/postgres + symfony4 docker image
+## php7.1 + nginx + percona/postgres + symfony4 docker image
 
 Just clone the repo and run ```docker-compose up```, your symfony aplication should be placed in ```symfony``` directory. All nginx logs will be placed in `logs` directory.
 

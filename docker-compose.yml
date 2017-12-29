@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
     mysql_db:
         image: percona
@@ -23,7 +23,6 @@ services:
             - "80:80"
         links:
             - php
-        volumes_from:
-            - php
         volumes:
+            - php
             - ./logs/nginx/:/var/log/nginx
