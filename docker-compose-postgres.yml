@@ -1,0 +1,28 @@
+version: '2'
+services:
+    postgres_db:
+        image: postgres
+        ports:
+            - "5432:5432"
+        environment:
+            POSTGRES_DB: symfony
+            POSTGRES_USER: root
+            POSTGRES_PASSWORD: root
+    php:
+        build: ./php-fpm
+        expose:
+            - "9000"
+        volumes:
+            - ./symfony:/var/www/symfony
+        links:
+            - postgres_db
+    nginx:
+        build: ./nginx
+        ports:
+            - "80:80"
+        links:
+            - php
+        volumes_from:
+            - php
+        volumes:
+            - ./logs/nginx/:/var/log/nginx
