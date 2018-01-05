@@ -14,4 +14,4 @@ DB credentials:
 * db name: symfony
 * user: root
 * password: root
-* host: db
+* host: mysql_db or postgres_db
