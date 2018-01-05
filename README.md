@@ -6,6 +6,8 @@ For postgres version run ```docker-compose -f docker-compose-postgres.yml```.
 
 After running the container, page will be available at ```http://symfony.local/```. 
 
+Xdebug is available at `10000` port.
+
 Requires docker-compose 1.6+
 
 DB credentials:
